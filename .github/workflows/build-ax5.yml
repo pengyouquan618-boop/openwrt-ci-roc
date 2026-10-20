@@ -1,0 +1,17 @@
+name: Build AX5 LibWrt
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - ax5
+    steps:
+      - uses: actions/checkout@main
+      - name: Roc Compile
+        uses: ./.github/actions/roc
+        with:
+          config: ${{ matrix.config }}
