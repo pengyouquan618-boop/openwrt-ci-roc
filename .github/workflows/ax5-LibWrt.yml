@@ -17,8 +17,8 @@ jobs:
       contents: write
       actions: write
     with:
-      repo_url: https://github.com/laipeng668/openwrt-6.x.git
-      repo_branch: 25.12-nss
+      repo_url: https://github.com/immortalwrt/immortalwrt
+      repo_branch: openwrt-25.12
       config_file: configs/ax5.config
       firmware_tag: IPQ60XX
       kernel_file: kernel-6.12
